@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+
+
+
+    tools:context="com.example.cake.mqtttest.chatActivity"
+    android:id="@+id/mapLayout"
+    android:windowSoftInputMode="adjustResize">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/linearLayout"
+        android:background="#336666"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/finishButton"
+            android:onClick="onFinishClick"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignTop="@+id/pickUpButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#EEEEEE"
+            android:background="@drawable/top_orange_button" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Pick Up"
+            android:id="@+id/pickUpButton"
+            android:onClick="onPickupClick"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#EEEEEE"
+            android:background="@drawable/top_orange_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Chat"
+            android:id="@+id/textView3"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#EEEEEE" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/ETAview"
+            android:background="#a8004f54"
+            android:gravity="center"
+            android:textColor="#eeeeee" />
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            class="com.google.android.gms.maps.MapFragment"
+            android:layout_marginBottom="133dp"
+            android:layout_marginTop="30dp" />
+
+        <WebView
+                android:layout_width="match_parent"
+                android:layout_height="133dp"
+                android:id="@+id/webView"
+
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:id="@+id/chatInput"
+        android:layout_alignParentBottom="true"
+        android:background="#338888"
+        android:gravity="center_vertical">
+
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:id="@+id/chatText"
+            android:singleLine="true"
+            android:background="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="10dp" />
+
+        <Button
+                android:layout_width="76dp"
+                android:layout_height="36dp"
+                android:text="Send"
+                android:id="@+id/Send"
+                android:hint="Enter value"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+            android:onClick="onSendChatMessage"
+            android:background="@drawable/top_orange_button" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
